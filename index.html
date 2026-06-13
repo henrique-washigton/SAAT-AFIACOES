@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SAAT Afiações – Afiação profissional e microscópica de tesouras cirúrgicas, alicates de cutícula, facas e instrumentos. Certificação Mundial S.A e técnica Staleks. Atendemos clínicas, hospitais, salões, barbearias e restaurantes em Foz do Iguaçu/PR. Envio para todo o Brasil via Correios.">
+<title>SAAT Afiações – Afiação Profissional e Microscópica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:    #0A0A0A;
+    --dark:     #141414;
+    --surface:  #1C1C1C;
+    --muted:    #2E2E2E;
+    --border:   #333333;
+    --gray:     #888888;
+    --light:    #CCCCCC;
+    --white:    #F5F5F5;
+    --red:      #CC0000;
+    --red-dark: #990000;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 clamp(1rem, 5vw, 4rem);
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.6rem;
+    text-decoration: none;
+  }
+  .nav-logo img { height: 28px; width: auto; }
+  .nav-logo-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: 1.2rem; letter-spacing: 0.08em;
+    color: var(--white);
+  }
+
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none; align-items: center;
+  }
+  .nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--red); }
+
+  .nav-cta {
+    background: var(--red);
+    color: var(--white) !important;
+    padding: 0.45rem 1.1rem;
+    border-radius: 3px;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--red-dark) !important; color: var(--white) !important; }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column; gap: 5px; cursor: pointer; padding: 4px;
+    background: none; border: none;
+  }
+  .nav-toggle span {
+    display: block; width: 24px; height: 2px;
+    background: var(--white); border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ── HERO ── */
+  #inicio {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: clamp(5rem, 10vw, 8rem) clamp(1rem, 5vw, 4rem) 4rem;
+    position: relative; overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(135deg, rgba(204,0,0,0.06) 0%, transparent 60%),
+      linear-gradient(to bottom, var(--black) 0%, #0f0f0f 100%);
+  }
+
+  .blade-line {
+    position: absolute; right: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--red), transparent);
+    opacity: 0.5;
+  }
+  .blade-line::before {
+    content: '';
+    position: absolute; right: 10px; top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(204,0,0,0.3), transparent);
+  }
+
+  .hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-content { max-width: 620px; }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 1.5rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block;
+    width: 32px; height: 1px; background: var(--red);
+  }
+
+  h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 8vw, 5.8rem);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+  h1 em {
+    font-style: normal;
+    color: var(--red);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: var(--light);
+    max-width: 520px;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+  }
+
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 2.5rem; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    padding: 0.55rem 0.9rem;
+    font-size: 0.8rem;
+    color: var(--light);
+  }
+
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--red);
+    color: var(--white);
+    padding: 0.85rem 2rem;
+    font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: background 0.2s, transform 0.15s;
+    border: none; cursor: pointer; font-family: 'Inter', sans-serif;
+  }
+  .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    padding: 0.85rem 2rem;
+    font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--red); color: var(--red); }
+
+  .hero-logo-wrap {
+    display: flex; justify-content: center; align-items: center;
+    position: relative;
+  }
+  .hero-logo-wrap img {
+    width: 100%; max-width: 420px;
+    filter: drop-shadow(0 0 40px rgba(204,0,0,0.15));
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 2rem clamp(1rem, 5vw, 4rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+  .stat { text-align: center; }
+  .stat-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: 2.6rem;
+    color: var(--red); line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.78rem; color: var(--gray);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-top: 0.3rem;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 5rem clamp(1rem, 5vw, 4rem);
+  }
+
+  .section-label {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--red); margin-bottom: 0.8rem;
+  }
+  .section-label::before {
+    content: ''; width: 20px; height: 1px; background: var(--red);
+  }
+
+  h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: clamp(2rem, 5vw, 3.2rem);
+    text-transform: uppercase; line-height: 1.05;
+    margin-bottom: 1rem;
+  }
+
+  .section-intro {
+    color: var(--light); max-width: 560px;
+    font-size: 1rem; margin-bottom: 3rem; line-height: 1.7;
+  }
+
+  /* ── SEGMENTOS ── */
+  #servicos { background: var(--dark); }
+
+  .segments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  .segment-card {
+    background: var(--surface);
+    padding: 2rem 1.8rem;
+    position: relative; overflow: hidden;
+    transition: background 0.25s;
+    cursor: default;
+  }
+  .segment-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 2px; background: var(--red);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .segment-card:hover { background: #222; }
+  .segment-card:hover::after { transform: scaleX(1); }
+
+  .segment-icon {
+    font-size: 2rem; margin-bottom: 1rem; display: block;
+  }
+  .segment-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 1.3rem;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    margin-bottom: 0.6rem;
+  }
+  .segment-desc {
+    font-size: 0.85rem; color: var(--gray); line-height: 1.6;
+  }
+  .segment-items {
+    margin-top: 0.8rem; list-style: none;
+  }
+  .segment-items li {
+    font-size: 0.8rem; color: var(--light);
+    padding: 0.2rem 0;
+    padding-left: 1rem; position: relative;
+  }
+  .segment-items li::before {
+    content: '—'; position: absolute; left: 0;
+    color: var(--red); font-size: 0.7rem;
+  }
+
+  .segment-tag {
+    display: inline-block; margin-top: 1rem;
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--red);
+    border: 1px solid rgba(204,0,0,0.35);
+    background: rgba(204,0,0,0.08);
+    padding: 0.3rem 0.6rem; border-radius: 2px;
+  }
+
+  /* ── AFIAÇÕES / TÉCNICAS ── */
+  #afiacoes { background: var(--black); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .service-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.8rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .service-card:hover {
+    border-color: var(--red);
+    transform: translateY(-3px);
+  }
+  .service-card-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+  .service-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 1.15rem;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    margin-bottom: 0.5rem; color: var(--white);
+  }
+  .service-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.6; margin-bottom: 0.6rem; }
+  .service-price {
+    display: inline-block;
+    font-size: 0.78rem; font-weight: 700;
+    color: var(--red);
+    border-top: 1px solid var(--border);
+    padding-top: 0.6rem; margin-top: 0.4rem; width: 100%;
+    letter-spacing: 0.03em;
+  }
+  .service-tech {
+    font-size: 0.78rem; color: var(--light);
+    background: var(--muted);
+    border-left: 2px solid var(--red);
+    padding: 0.5rem 0.7rem; margin-top: 0.6rem;
+    line-height: 1.5;
+  }
+
+  /* ── CERTIFICAÇÕES / SOBRE ── */
+  #sobre { background: var(--dark); }
+
+  .sobre-wrap {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+  }
+
+  .cert-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+  .cert-item {
+    display: flex; gap: 1rem; align-items: flex-start;
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 1.2rem; border-radius: 4px;
+  }
+  .cert-icon {
+    flex-shrink: 0; width: 42px; height: 42px;
+    background: rgba(204,0,0,0.1); border: 1px solid rgba(204,0,0,0.3);
+    border-radius: 2px; display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+  }
+  .cert-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.2rem; color: var(--white); }
+  .cert-text { font-size: 0.82rem; color: var(--gray); line-height: 1.5; }
+
+  .equip-photos {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;
+  }
+  .equip-photos img {
+    width: 100%; height: 100%; object-fit: cover;
+    border-radius: 4px; border: 1px solid var(--border);
+    aspect-ratio: 1/1;
+  }
+  .equip-photos figure { margin: 0; position: relative; }
+  .equip-caption {
+    font-size: 0.72rem; color: var(--gray);
+    margin-top: 0.4rem; text-align: center;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  /* ── DIFERENCIAIS ── */
+  #diferenciais { background: var(--black); }
+
+  .diff-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px; background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .diff-item {
+    background: var(--surface);
+    padding: 2rem;
+    display: flex; gap: 1.2rem; align-items: flex-start;
+  }
+  .diff-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    background: rgba(204,0,0,0.1);
+    border: 1px solid rgba(204,0,0,0.3);
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+  .diff-title {
+    font-weight: 600; font-size: 0.95rem;
+    margin-bottom: 0.3rem; color: var(--white);
+  }
+  .diff-text { font-size: 0.83rem; color: var(--gray); line-height: 1.5; }
+
+  /* ── DEPOIMENTOS ── */
+  #depoimentos { background: var(--dark); }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+  }
+  .review-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem;
+  }
+  .review-stars { color: var(--red); font-size: 0.9rem; margin-bottom: 0.6rem; letter-spacing: 0.1em; }
+  .review-text { font-size: 0.88rem; color: var(--light); line-height: 1.6; margin-bottom: 1rem; }
+  .review-author { font-size: 0.8rem; font-weight: 600; color: var(--white); }
+  .review-date { font-size: 0.72rem; color: var(--gray); margin-top: 0.1rem; }
+
+  .reviews-cta { text-align: center; margin-top: 2.5rem; }
+
+  /* ── COBERTURA / LOGÍSTICA ── */
+  #cobertura { background: var(--black); }
+  .cobertura-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .cobertura-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 4px; padding: 1.8rem;
+  }
+  .cobertura-card .icon { font-size: 1.8rem; margin-bottom: 1rem; }
+  .cobertura-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 1.1rem;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    margin-bottom: 0.6rem; color: var(--white);
+  }
+  .cobertura-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.6; }
+  .cobertura-card ul { margin-top: 0.6rem; padding-left: 0; list-style: none; }
+  .cobertura-card li {
+    font-size: 0.82rem; color: var(--light); padding: 0.2rem 0 0.2rem 1rem; position: relative;
+  }
+  .cobertura-card li::before { content: '—'; position: absolute; left: 0; color: var(--red); font-size: 0.7rem; }
+
+  /* ── ORÇAMENTO ── */
+  #orcamento { background: var(--dark); }
+
+  .orcamento-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .orcamento-info h2 { margin-bottom: 1rem; }
+
+  .contact-methods {
+    display: flex; flex-direction: column; gap: 1rem;
+    margin-top: 2rem;
+  }
+  .contact-method {
+    display: flex; align-items: center; gap: 1rem;
+    text-decoration: none; color: var(--white);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1rem 1.2rem;
+    border-radius: 4px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .contact-method:hover { border-color: var(--red); background: #1e1e1e; }
+  .contact-method-icon {
+    font-size: 1.4rem; flex-shrink: 0;
+    width: 44px; text-align: center;
+  }
+  .contact-method-label { font-size: 0.7rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.1em; }
+  .contact-method-value { font-size: 0.95rem; font-weight: 500; }
+
+  /* Form */
+  .orcamento-form {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: 4px;
+  }
+  .form-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 1.3rem;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+  .form-group label {
+    font-size: 0.75rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--gray);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--muted);
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    border-radius: 3px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--red); }
+  .form-group select option { background: var(--surface); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .btn-submit {
+    width: 100%; padding: 0.9rem;
+    background: var(--red); color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    border: none; border-radius: 3px; cursor: pointer;
+    transition: background 0.2s;
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  }
+  .btn-submit:hover { background: var(--red-dark); }
+
+  /* ── LOCALIZAÇÃO ── */
+  #localizacao { background: var(--black); }
+
+  .map-info-wrap {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 3rem;
+    align-items: start;
+  }
+  .map-info h2 { margin-bottom: 1rem; }
+  .address-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .address-block p { font-size: 0.95rem; color: var(--light); line-height: 1.8; }
+  .address-block strong { color: var(--white); }
+
+  .map-placeholder {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    height: 320px;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 1rem; color: var(--gray);
+    font-size: 0.9rem;
+  }
+  .map-placeholder iframe {
+    width: 100%; height: 100%; border: none; display: block;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+    padding: 2rem clamp(1rem, 5vw, 4rem);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-logo {
+    display: flex; align-items: center; gap: 0.6rem;
+    text-decoration: none;
+  }
+  .footer-logo img { height: 24px; width: auto; }
+  .footer-logo-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: 1.1rem;
+    letter-spacing: 0.08em; color: var(--white);
+  }
+  .footer-text { font-size: 0.8rem; color: var(--gray); }
+  .footer-socials { display: flex; gap: 1rem; }
+  .footer-social {
+    width: 36px; height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gray); text-decoration: none; font-size: 0.9rem;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .footer-social:hover { border-color: var(--red); color: var(--red); }
+
+  /* ── WHATSAPP FLOAT ── */
+  .whatsapp-float {
+    position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 200;
+    width: 56px; height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; color: white; font-size: 1.6rem;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+  }
+  .whatsapp-float::before {
+    content: 'Solicitar Orçamento';
+    position: absolute; right: 68px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--white);
+    font-size: 0.75rem; font-family: 'Inter', sans-serif;
+    padding: 0.4rem 0.8rem;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .whatsapp-float:hover::before { opacity: 1; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px; background: var(--border);
+    margin: 0 clamp(1rem, 5vw, 4rem);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-logo-wrap { order: -1; max-width: 240px; margin: 0 auto 1rem; }
+    .hero-logo-wrap img { max-width: 200px; }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: absolute; top: 64px; left: 0; right: 0;
+      background: rgba(10,10,10,0.98);
+      padding: 1.5rem clamp(1rem,5vw,4rem);
+      border-bottom: 1px solid var(--border);
+      gap: 1rem;
+    }
+    .nav-toggle { display: flex; }
+
+    .orcamento-wrap,
+    .map-info-wrap,
+    .sobre-wrap,
+    .diff-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .equip-photos { grid-template-columns: 1fr 1fr; }
+
+    h1 { font-size: clamp(2.6rem, 12vw, 4rem); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-logo">
+    <img src="img/Design_sem_nome_zip_-_2.png" alt="SAAT Afiações">
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#servicos">Segmentos</a></li>
+    <li><a href="#afiacoes">Serviços</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#depoimentos">Avaliações</a></li>
+    <li><a href="#localizacao">Localização</a></li>
+    <li><a href="#orcamento" class="nav-cta">Orçamento</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="inicio">
+  <div class="hero-bg"></div>
+  <div class="blade-line"></div>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Afiação Profissional & Microscópica</div>
+      <h1>Corte<br>perfeito.<br><em>Sempre.</em></h1>
+      <p class="hero-sub">
+        Mais de 12 anos afiando instrumentos para clínicas, hospitais, salões de beleza, barbearias e restaurantes em Foz do Iguaçu. Técnica certificada Mundial S.A e curso de afiação microscópica Staleks. Enviamos para todo o Brasil via Correios.
+      </p>
+      <div class="hero-badges">
+        <div class="hero-badge">✓ Certificação Mundial S.A</div>
+        <div class="hero-badge">✓ Técnica Microscópica Staleks</div>
+        <div class="hero-badge">✓ Gravação a Laser</div>
+      </div>
+      <div class="hero-actions">
+        <a href="https://api.whatsapp.com/send?phone=5545984280322&text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn-primary">
+          💬 &nbsp;Solicitar orçamento
+        </a>
+        <a href="#afiacoes" class="btn-secondary">Ver serviços →</a>
+      </div>
+    </div>
+    <div class="hero-logo-wrap">
+      <img src="img/Design_sem_nome_zip_-_2.png" alt="Logo SAAT Afiações">
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-number">12+</div>
+    <div class="stat-label">Anos de experiência</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">5★</div>
+    <div class="stat-label">Avaliação no Google</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">2</div>
+    <div class="stat-label">Certificações técnicas</div>
+  </div>
+  <div class="stat">
+    <div class="stat-number">BR</div>
+    <div class="stat-label">Envio para todo o país</div>
+  </div>
+</div>
+
+<!-- SEGMENTOS -->
+<section id="servicos">
+  <div class="section-label">Quem atendemos</div>
+  <h2>Segmentos<br>que servimos</h2>
+  <p class="section-intro">
+    Atendemos profissionais que dependem de instrumentos em perfeito estado para garantir qualidade, segurança e produtividade no dia a dia.
+  </p>
+  <div class="segments-grid">
+    <div class="segment-card">
+      <span class="segment-icon">🏥</span>
+      <div class="segment-title">Clínicas & Hospitais</div>
+      <p class="segment-desc">Instrumentos cirúrgicos com precisão, incluindo peças com tungstênio.</p>
+      <ul class="segment-items">
+        <li>Tesouras cirúrgicas</li>
+        <li>Bisturis e espátulas</li>
+        <li>Alicates e pinças cirúrgicas</li>
+        <li>Instrumentos odontológicos</li>
+      </ul>
+      <span class="segment-tag">Desconto por quantidade</span>
+    </div>
+    <div class="segment-card">
+      <span class="segment-icon">💈</span>
+      <div class="segment-title">Salões & Barbearias</div>
+      <p class="segment-desc">Tesouras e alicates que fazem a diferença em cada corte.</p>
+      <ul class="segment-items">
+        <li>Tesouras de cabelo/pet</li>
+        <li>Lâminas de máquina de corte</li>
+        <li>Alicates de cutícula</li>
+        <li>Pinças de cílios/sobrancelha</li>
+      </ul>
+    </div>
+    <div class="segment-card">
+      <span class="segment-icon">🍽️</span>
+      <div class="segment-title">Restaurantes & Cozinhas</div>
+      <p class="segment-desc">Facas e cutelos afiados para alta performance culinária.</p>
+      <ul class="segment-items">
+        <li>Facas de cozinha</li>
+        <li>Facas de churrasco</li>
+        <li>Facas especiais (japonesas, damasco)</li>
+        <li>Restauração de lâminas</li>
+      </ul>
+    </div>
+    <div class="segment-card">
+      <span class="segment-icon">✂️</span>
+      <div class="segment-title">Costura & Podologia</div>
+      <p class="segment-desc">Corte preciso para ateliês, confecções e podologia.</p>
+      <ul class="segment-items">
+        <li>Tesouras de costura</li>
+        <li>Alicates de unha</li>
+        <li>Espátulas, formões e bisturis</li>
+        <li>Instrumentos de podologia</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVIÇOS / TÉCNICAS -->
+<section id="afiacoes">
+  <div class="section-label">O que afiamos</div>
+  <h2>Serviços<br>de afiação</h2>
+  <p class="section-intro">
+    Cada tipo de instrumento exige uma técnica e equipamento específico. Trabalhamos com afiação tradicional e microscópica, sempre preservando o gume original.
+  </p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-card-icon">💅</div>
+      <h3>Alicates & Tesouras de Cutícula</h3>
+      <p>Afiação tradicional com rebolo hidratado (certificação Mundial S.A) ou afiação microscópica com limas diamantadas ultra finas importadas (técnica Staleks).</p>
+      <div class="service-tech">Tradicional ou microscópica · técnica importada da Ucrânia</div>
+      <div class="service-price">A partir de R$ 15</div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-icon">✂️</div>
+      <h3>Tesouras de Cabelo & Pet</h3>
+      <p>Afiação profissional com fio laser ou fio navalha, de acordo com o tipo de corte e necessidade do profissional.</p>
+      <div class="service-tech">Fio laser ou fio navalha</div>
+      <div class="service-price">A partir de R$ 25</div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-icon">🩺</div>
+      <h3>Instrumentos Cirúrgicos</h3>
+      <p>Tesouras, alicates e instrumentos cirúrgicos, inclusive com carboneto de tungstênio, usando microscópio binocular articulado e motor suspenso de precisão.</p>
+      <div class="service-tech">Microscópio binocular · limas, brocas e discos diamantados</div>
+      <div class="service-price">A partir de R$ 15</div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-icon">✂️</div>
+      <h3>Tesouras de Costura</h3>
+      <p>Afiação que respeita o ângulo original de cada modelo, do tamanho pequeno ao grande porte.</p>
+      <div class="service-price">A partir de R$ 20</div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-icon">🔪</div>
+      <h3>Facas em Geral</h3>
+      <p>Facas de cozinha, churrasco e facas especiais (japonesas, sashimi, aço damasco), com cinta de lixa, pedras e discos diamantados.</p>
+      <div class="service-tech">Cinta de lixa, pedras, discos diamantados e politriz</div>
+      <div class="service-price">A partir de R$ 15</div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-icon">🛠️</div>
+      <h3>Restauração de Lâminas</h3>
+      <p>Remoção de ferrugem, afiação e polimento completo para devolver vida útil a facas desgastadas.</p>
+      <div class="service-price">A partir de R$ 60</div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-icon">💆</div>
+      <h3>Espátulas, Formões & Bisturis</h3>
+      <p>Para podologia e uso cirúrgico, com afiação específica para cada perfil de lâmina.</p>
+      <div class="service-price">A partir de R$ 8</div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-icon">✨</div>
+      <h3>Gravação a Laser</h3>
+      <p>Equipamento de fiber laser para identificação e personalização de alicates, tesouras, facas, estetoscópios e outros utensílios de metal.</p>
+      <div class="service-tech">Disponível em conjunto com a afiação ou separadamente</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="sobre-wrap">
+    <div>
+      <div class="section-label">Quem cuida do seu instrumento</div>
+      <h2>Técnica,<br>certificação<br>e cuidado</h2>
+      <p class="section-intro">
+        Profissional formado em Gestão Comercial, com curso técnico em Metalurgia e atualmente cursando Engenharia de Software — uma base técnica que une precisão mecânica e atenção ao detalhe em cada afiação.
+      </p>
+      <div class="cert-list">
+        <div class="cert-item">
+          <div class="cert-icon">🏅</div>
+          <div>
+            <div class="cert-title">Certificado de Qualidade — Mundial S.A</div>
+            <p class="cert-text">Técnica de afiação tradicional certificada por uma das maiores marcas de instrumentos do Brasil.</p>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">🔬</div>
+          <div>
+            <div class="cert-title">Curso de Afiação Microscópica — Staleks</div>
+            <p class="cert-text">Técnica internacional de precisão, com limas diamantadas ultra finas importadas da Ucrânia, para acabamento de altíssimo padrão.</p>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">⚙️</div>
+          <div>
+            <div class="cert-title">Formação Técnica em Metalurgia</div>
+            <p class="cert-text">Conhecimento sobre ligas, dureza e comportamento dos metais aplicado diretamente na escolha da técnica de afiação ideal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="equip-photos">
+        <figure>
+          <img src="img/IMG_0040.jpeg" alt="Microscópio binocular articulado e instrumentos cirúrgicos">
+          <div class="equip-caption">Microscópio binocular de precisão</div>
+        </figure>
+        <figure>
+          <img src="img/SAAT_afiac_o_es__-_5.png" alt="Bancada de afiação com rebolo e alicates de cutícula">
+          <div class="equip-caption">Bancada de afiação tradicional</div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais">
+  <div class="section-label">Por que nos escolher</div>
+  <h2>Nossos<br>diferenciais</h2>
+  <p class="section-intro">
+    A SAAT Afiações combina técnica apurada, equipamento de precisão e atendimento ágil para o que o seu trabalho exige.
+  </p>
+  <div class="diff-grid">
+    <div class="diff-item">
+      <div class="diff-icon">🏅</div>
+      <div>
+        <div class="diff-title">Técnica Certificada</div>
+        <p class="diff-text">Certificação Mundial S.A e curso de afiação microscópica Staleks, com equipamentos próprios para cada tipo de instrumento.</p>
+      </div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-icon">🔬</div>
+      <div>
+        <div class="diff-title">Afiação Microscópica</div>
+        <p class="diff-text">Limas diamantadas ultra finas importadas e microscópio binocular para acabamento de altíssima precisão.</p>
+      </div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-icon">🤝</div>
+      <div>
+        <div class="diff-title">Atendimento Personalizado</div>
+        <p class="diff-text">Avaliamos cada instrumento individualmente e indicamos a melhor técnica e periodicidade de afiação.</p>
+      </div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-icon">📦</div>
+      <div>
+        <div class="diff-title">Envio para todo o Brasil</div>
+        <p class="diff-text">Atendemos clientes de outras cidades via Correios — frete por conta do cliente, combinado no orçamento.</p>
+      </div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-icon">🏥</div>
+      <div>
+        <div class="diff-title">Desconto para Clínicas</div>
+        <p class="diff-text">Condições especiais por quantidade na afiação de instrumentos cirúrgicos para clínicas e hospitais.</p>
+      </div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-icon">⏱️</div>
+      <div>
+        <div class="diff-title">+12 Anos de Experiência</div>
+        <p class="diff-text">Mais de 12 anos dedicados exclusivamente à afiação profissional, com clientes fixos em toda a região.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="section-label">O que dizem nossos clientes</div>
+  <h2>Avaliações<br>no Google</h2>
+  <p class="section-intro">
+    Depoimentos reais de clientes que confiam na SAAT Afiações.
+  </p>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Trabalho de excelente qualidade, ótimo atendimento e custo benefício. Recomendo!</p>
+      <div class="review-author">Indianara Torres</div>
+      <div class="review-date">Out. 2024</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Muito satisfeita com meus alicates amolados, ficaram muito ótimos, e a gravação feita também ficou ótima, bom preço e excelente atendimento.</p>
+      <div class="review-author">Cristiane T Freitas Ferreira</div>
+      <div class="review-date">Ago. 2024</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Atendimento rápido e trabalho impecável. Há anos mando meus alicates para afiação e não troco, super recomendo.</p>
+      <div class="review-author">Itamara Benitez</div>
+      <div class="review-date">Ago. 2024</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Excelente atendimento, produtos excelentes, serviços atualizados e modernos de muito bom gosto, com local acessível. Empresa que indico com certeza!</p>
+      <div class="review-author">Tania Mara Gaspar</div>
+      <div class="review-date">Ago. 2024</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Sempre muito bom poder contar com o trabalho excelente de vocês, faço questão de sempre fazer minha manutenção com os melhores. Obrigada pelo ótimo atendimento de sempre 😊</p>
+      <div class="review-author">Julianne Fernandes de Souza Baraúna</div>
+      <div class="review-date">Jul. 2024</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Deixei minha faca de churrasco de aço carbono para afiar, ficou com um fio de navalha. Ótimo serviço.</p>
+      <div class="review-author">Luiz Vilhalva</div>
+      <div class="review-date">Out. 2024</div>
+    </div>
+  </div>
+  <div class="reviews-cta">
+    <a href="https://share.google/mEj69YHF0iN1ydS8G" target="_blank" class="btn-secondary">Ver mais avaliações no Google →</a>
+  </div>
+</section>
+
+<!-- COBERTURA / LOGÍSTICA -->
+<section id="cobertura">
+  <div class="section-label">Como funciona</div>
+  <h2>Atendimento<br>& coleta</h2>
+  <p class="section-intro">
+    Veja como funciona o atendimento de acordo com a sua localização.
+  </p>
+  <div class="cobertura-grid">
+    <div class="cobertura-card">
+      <div class="icon">🏠</div>
+      <h3>Foz do Iguaçu — Loja</h3>
+      <p>Atendimento presencial na loja, na Av. Jucelino Kubitschek, 1104.</p>
+      <ul>
+        <li>Coleta na região central: terças e quintas</li>
+        <li>Demais bairros: coleta terceirizada com taxa por região</li>
+      </ul>
+    </div>
+    <div class="cobertura-card">
+      <div class="icon">🌎</div>
+      <h3>Paraguai & Argentina</h3>
+      <p>Atendemos clientes do Paraguai e Argentina, que costumam vir pessoalmente até a loja.</p>
+      <ul>
+        <li>Não realizamos coleta nesses países</li>
+        <li>Entrega e retirada combinadas presencialmente</li>
+      </ul>
+    </div>
+    <div class="cobertura-card">
+      <div class="icon">📦</div>
+      <h3>Outras cidades do Brasil</h3>
+      <p>Envie seus instrumentos para afiação via Correios e receba de volta no endereço informado.</p>
+      <ul>
+        <li>Frete por conta do cliente</li>
+        <li>Solicite o orçamento antes do envio</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ORÇAMENTO -->
+<section id="orcamento">
+  <div class="orcamento-wrap">
+    <div class="orcamento-info">
+      <div class="section-label">Entre em contato</div>
+      <h2>Solicite<br>seu orçamento</h2>
+      <p class="section-intro">
+        Atendemos pessoas físicas e empresas, em Foz do Iguaçu ou em qualquer cidade do Brasil via Correios. Fale com a gente pelo WhatsApp ou preencha o formulário ao lado.
+      </p>
+      <div class="contact-methods">
+        <a href="https://api.whatsapp.com/send?phone=5545984280322&text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="contact-method">
+          <span class="contact-method-icon">💬</span>
+          <div>
+            <div class="contact-method-label">WhatsApp</div>
+            <div class="contact-method-value">(45) 98428-0322</div>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/saatafiacoes" target="_blank" class="contact-method">
+          <span class="contact-method-icon">📸</span>
+          <div>
+            <div class="contact-method-label">Instagram</div>
+            <div class="contact-method-value">@saatafiacoes</div>
+          </div>
+        </a>
+        <a href="https://www.facebook.com/saatafiacoes" target="_blank" class="contact-method">
+          <span class="contact-method-icon">📘</span>
+          <div>
+            <div class="contact-method-label">Facebook</div>
+            <div class="contact-method-value">saatafiacoes</div>
+          </div>
+        </a>
+        <a href="https://share.google/mEj69YHF0iN1ydS8G" target="_blank" class="contact-method">
+          <span class="contact-method-icon">📍</span>
+          <div>
+            <div class="contact-method-label">Google</div>
+            <div class="contact-method-value">Ver perfil e avaliações</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="orcamento-form">
+      <div class="form-title">Formulário de Orçamento</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" placeholder="Seu nome">
+        </div>
+        <div class="form-group">
+          <label>WhatsApp / Telefone</label>
+          <input type="tel" placeholder="(45) 9 0000-0000">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Segmento</label>
+          <select id="segmentoSelect">
+            <option value="" disabled selected>Selecione o seu segmento</option>
+            <option>Clínica / Hospital</option>
+            <option>Salão de Beleza</option>
+            <option>Barbearia / Pet</option>
+            <option>Restaurante / Cozinha</option>
+            <option>Costura / Podologia</option>
+            <option>Uso Pessoal</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Cidade</label>
+          <input type="text" placeholder="Foz do Iguaçu, outra cidade...">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Instrumentos para afiar</label>
+        <textarea placeholder="Ex: 5 tesouras de cabelo, 3 alicates de cutícula, 2 facas de chef..."></textarea>
+      </div>
+      <button class="btn-submit" onclick="enviarWhatsApp()">
+        💬 &nbsp;Enviar pelo WhatsApp
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section id="localizacao">
+  <div class="section-label">Onde estamos</div>
+  <div class="map-info-wrap">
+    <div class="map-info">
+      <h2>Localização</h2>
+      <p class="section-intro">Venha nos visitar ou combine a coleta na região central de Foz do Iguaçu.</p>
+      <div class="address-block">
+        <p>
+          <strong>SAAT Afiações</strong><br>
+          Av. Jucelino Kubitschek, 1104<br>
+          Foz do Iguaçu – PR
+        </p>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=5545984280322&text=Olá,%20gostaria%20de%20uma%20informação." target="_blank" class="btn-primary">
+        💬 &nbsp;Falar no WhatsApp
+      </a>
+    </div>
+    <div class="map-placeholder">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232.7!2d-54.5866866!3d-25.5344895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f6910b646cefdb%3A0x6a3cb9b012521cf2!2sSAAT%20AFIA%C3%87%C3%95ES!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Localização SAAT Afiações">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#inicio" class="footer-logo">
+    <img src="img/Design_sem_nome_zip_-_2.png" alt="SAAT Afiações">
+    <span class="footer-logo-text">SAAT Afiações</span>
+  </a>
+  <p class="footer-text">© 2025 SAAT Afiações · Foz do Iguaçu – PR</p>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/saatafiacoes" target="_blank" class="footer-social" aria-label="Instagram">𝕀</a>
+    <a href="https://www.facebook.com/saatafiacoes" target="_blank" class="footer-social" aria-label="Facebook">f</a>
+    <a href="https://api.whatsapp.com/send?phone=5545984280322" target="_blank" class="footer-social" aria-label="WhatsApp">W</a>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://api.whatsapp.com/send?phone=5545984280322&text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento."
+   target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  💬
+</a>
+
+<script>
+  // Mobile nav toggle
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  // Form → WhatsApp
+  function enviarWhatsApp() {
+    const nome = document.querySelector('input[type=text]').value.trim();
+    const tel = document.querySelector('input[type=tel]').value.trim();
+    const seg = document.getElementById('segmentoSelect').value;
+    const cidade = document.querySelectorAll('input[type=text]')[1].value.trim();
+    const desc = document.querySelector('textarea').value.trim();
+    if (!nome || !desc) { alert('Por favor, preencha seu nome e os instrumentos para afiar.'); return; }
+    const msg = `Olá! Gostaria de um orçamento.\n\n*Nome:* ${nome}\n*Telefone:* ${tel || 'não informado'}\n*Segmento:* ${seg || 'não informado'}\n*Cidade:* ${cidade || 'não informada'}\n*Instrumentos:* ${desc}`;
+    window.open(`https://api.whatsapp.com/send?phone=5545984280322&text=${encodeURIComponent(msg)}`, '_blank');
+  }
+</script>
+</body>
+</html>
